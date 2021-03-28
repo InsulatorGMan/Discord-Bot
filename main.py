@@ -1,5 +1,5 @@
 import discord
-
+import os
 client = discord.Client()
 
 
@@ -16,6 +16,4 @@ async def on_message(message):
     if message.content.startswith('$'):
         await message.channel.send('Hello!')
    
-
-// put your discord bots token here
-client.run('') 
+client.run(os.getenv('TOKEN'))
